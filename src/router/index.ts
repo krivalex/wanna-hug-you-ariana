@@ -6,7 +6,7 @@ const router = createRouter({
     {
       path: '/:pathMatch(.*)*',
       name: '404',
-      component: (): Promise<RouteComponent> => import('../sections/BeCareful.vue'),
+      component: (): Promise<RouteComponent> => import('../sections/StageOne.vue'),
     },
     {
       path: '/stageOne',
