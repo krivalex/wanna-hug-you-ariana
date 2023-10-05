@@ -3,3 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.next-stage-button {
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem;
+  animation: slow-text 12s linear infinite;
+}

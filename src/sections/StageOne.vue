@@ -50,12 +50,6 @@ const nextStage = () => {
 </script>
 
 <style scoped lang="scss">
-.next-stage-button {
-  padding: 0.5rem 2rem;
-  font-size: 1.5rem;
-  animation: slow-text 12s linear infinite;
-}
-
 .wheel-slow-text {
   position: absolute;
   top: 50%;
