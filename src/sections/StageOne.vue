@@ -5,10 +5,10 @@
 <template>
   <div class="background">
     <video autoplay loop>
-      <source src="../assets/bg-video-stocks/rain.mp4" type="video/mp4" />
+      <source src="@/assets/bg-video-stocks/rain.mp4" type="video/mp4" />
     </video>
     <audio autoplay loop>
-      <source src="../assets/bg-audio/Wet_Hands.mp3" type="audio/mp3" id="audio" />
+      <source src="@/assets/bg-audio/Wet_Hands.mp3" type="audio/mp3" id="audio" />
     </audio>
   </div>
   <div class="wheel-slow-text">
