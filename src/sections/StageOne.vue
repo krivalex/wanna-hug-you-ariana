@@ -4,11 +4,11 @@
 <!-- в конце кнопку перехода на следующий стейдж -->
 <template>
   <div class="background">
-    <video autoplay loop>
+    <video autoplay loop muted>
       <source src="@/assets/bg-video-stocks/rain.mp4" type="video/mp4" />
     </video>
-    <audio autoplay loop>
-      <source src="@/assets/bg-audio/Wet_Hands.mp3" type="audio/mp3" id="audio" />
+    <audio id="audio" loop muted>
+      <source src="@/assets/bg-audio/Wet_Hands.mp3" type="audio/mp3" />
     </audio>
   </div>
   <div class="wheel-slow-text">
@@ -31,6 +31,16 @@ const router = useRouter()
 const nextStageApprove = ref(false)
 const firstText = ref(false)
 const secondText = ref(false)
+
+document.body.addEventListener('mousemove', function () {
+  startAudio()
+})
+
+const startAudio = () => {
+  const audio = document.getElementById('audio') as HTMLAudioElement
+  audio.muted = false
+  audio.play()
+}
 
 onMounted(() => {
   setTimeout(() => {
