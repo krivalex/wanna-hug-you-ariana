@@ -137,9 +137,9 @@ const videos = ref([
   .play-pause-button {
     padding: 0.8rem 0.6rem;
     border-radius: 50%;
-    margin-top: 60px;
+    margin-top: 20px;
     margin-bottom: 20px;
-    transform: scale(1.5);
+    transform: scale(1.2);
 
     :deep(.p-button-icon) {
       font-size: 1.4rem;
