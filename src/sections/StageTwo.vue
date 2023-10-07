@@ -26,7 +26,7 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 const nextStage = () => {
-  router.push('/stageThree')
+  router.push('/stage3')
 }
 
 function playVideo(id: number) {

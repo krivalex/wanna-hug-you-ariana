@@ -9,3 +9,70 @@
   font-size: 1.5rem;
   animation: slow-text 12s linear infinite;
 }
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  object-fit: contain;
+}
+
+.wheel-slow-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+
+  .text {
+    font-size: 1rem;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 2rem 10px;
+  }
+
+  .slow-text {
+    animation: slow-text 6s linear infinite;
+  }
+
+  .appeariance-text {
+    animation: appeariance-text 6s linear;
+  }
+}
+
+@keyframes slow-text {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes appeariance-text {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -55,56 +55,8 @@ onMounted(() => {
 })
 
 const nextStage = () => {
-  router.push('/stageTwo')
+  router.push('/stage2')
 }
 </script>
 
-<style scoped lang="scss">
-.wheel-slow-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100%;
-
-  .text {
-    font-size: 1rem;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin: 2rem 10px;
-  }
-
-  .slow-text {
-    animation: slow-text 6s linear infinite;
-  }
-}
-
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  min-width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-  object-fit: contain;
-}
-
-@keyframes slow-text {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-</style>
+<style lang="scss"></style>
