@@ -38,7 +38,7 @@ onMounted(() => {
   }, 300)
   setTimeout(() => {
     text.value[0].show = true
-  }, 3000)
+  }, 1000)
   setTimeout(() => {
     text.value[0].show = false
     text.value[1].show = true
