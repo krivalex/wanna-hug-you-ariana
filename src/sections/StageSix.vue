@@ -1,7 +1,7 @@
 <template>
   <div class="background">
-    <video autoplay loop muted>
-      <source src="@/assets/bg-video-stocks/rain.mp4" type="video/mp4" />
+    <video autoplay loop muted class="cover">
+      <source src="@/assets/bg-video-stocks/wave.mp4" type="video/mp4" />
     </video>
     <audio id="audio" loop muted>
       <source src="@/assets/bg-audio/Wet_Hands.mp3" type="audio/mp3" />
@@ -32,8 +32,8 @@
           </div>
           <div class="flex" v-if="index === 1">
             <h1 class="text">Дата</h1>
-            <p-calendar v-model="date" inline showWeek touchUI />
-            <p-button v-if="!warningButton" label="Далее" @click="nextStage" class="next-stage-button p-button-rounded" />
+            <p-calendar v-model="date" inline showWeek touchUI :date-format="'ru-ru'" :disabled="true" />
+            <p-button v-if="!warningButton" label="Нажми на меня" @click="nextStage" class="next-stage-button p-button-rounded" />
             <p-button v-else label="Инстаграм" :disabled="true" class="next-stage-button-no-animation p-button-rounded" />
           </div>
         </div>
@@ -70,6 +70,10 @@ const nextStage = () => {
 </script>
 
 <style scoped lang="scss">
+:deep(.p-datepicker.p-disabled) {
+  opacity: 1 !important;
+}
+
 :deep(.p-highlight) {
   background-color: red !important;
   color: white !important;
@@ -115,6 +119,8 @@ const nextStage = () => {
     font-size: 2rem;
     text-align: center;
     padding-bottom: 20px;
+    color: white;
+    -webkit-text-stroke: 0.6px black;
   }
 }
 

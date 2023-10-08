@@ -1,7 +1,7 @@
 <template>
   <div class="background">
-    <video autoplay loop muted>
-      <source src="@/assets/bg-video-stocks/rain.mp4" type="video/mp4" />
+    <video autoplay loop muted class="cover">
+      <source src="@/assets/bg-video-stocks/pexels.mp4" type="video/mp4" />
     </video>
     <audio id="audio" loop muted>
       <source src="@/assets/bg-audio/Wet_Hands.mp3" type="audio/mp3" />
@@ -64,5 +64,9 @@ const thirdText = ref(false)
   height: 60%;
   box-shadow: 0 0 3px 5px #ffffff;
   margin-top: 15px;
+}
+
+.cover {
+  object-fit: contain;
 }
 </style>
