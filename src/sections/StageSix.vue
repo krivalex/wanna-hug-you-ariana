@@ -4,7 +4,7 @@
       <source src="@/assets/bg-video-stocks/wave.mp4" type="video/mp4" />
     </video>
     <audio id="audio" loop muted>
-      <source src="@/assets/bg-audio/Wet_Hands.mp3" type="audio/mp3" />
+      <source src="@/assets/bg-audio/BRANDmoonlight.mp3" type="audio/mp3" />
     </audio>
   </div>
   <div class="content">
@@ -51,6 +51,16 @@ import { ref } from 'vue'
 
 const warningButton = ref(false)
 const date = ref(new Date('10/14/2023'))
+
+document.body.addEventListener('mousemove', function () {
+  startAudio()
+})
+
+const startAudio = () => {
+  const audio = document.getElementById('audio') as HTMLAudioElement
+  audio.muted = false
+  audio.play()
+}
 
 const value = ref([
   {

@@ -4,7 +4,7 @@
       <source src="@/assets/bg-video-stocks/pexels.mp4" type="video/mp4" />
     </video>
     <audio id="audio" loop muted>
-      <source src="@/assets/bg-audio/Wet_Hands.mp3" type="audio/mp3" />
+      <source src="@/assets/bg-audio/BRANDparo.mp3" type="audio/mp3" />
     </audio>
   </div>
   <div class="wheel-slow-text">
@@ -32,6 +32,16 @@ const router = useRouter()
 
 const nextStage = () => {
   router.push('/stage6')
+}
+
+document.body.addEventListener('mousemove', function () {
+  startAudio()
+})
+
+const startAudio = () => {
+  const audio = document.getElementById('audio') as HTMLAudioElement
+  audio.muted = false
+  audio.play()
 }
 
 onMounted(() => {

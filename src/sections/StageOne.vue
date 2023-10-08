@@ -8,7 +8,7 @@
       <source src="@/assets/bg-video-stocks/rain.mp4" type="video/mp4" />
     </video>
     <audio id="audio" loop muted>
-      <source src="@/assets/bg-audio/Wet_Hands.mp3" type="audio/mp3" />
+      <source src="@/assets/bg-audio/BRANDwet.mp3" type="audio/mp3" />
     </audio>
   </div>
   <div class="wheel-slow-text">

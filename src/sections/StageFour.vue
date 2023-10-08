@@ -1,4 +1,9 @@
 <template>
+  <div class="background">
+    <audio id="audio" loop muted>
+      <source src="@/assets/bg-audio/BRANDaway.mp3" type="audio/mp3" />
+    </audio>
+  </div>
   <div v-for="item in text" :key="item.letters">
     <BeatyAnimationText v-if="item.show" :text="item.letters" :show="item.show" />
   </div>
@@ -12,6 +17,16 @@ import BeatyAnimationText from '../components/BeatyAnimationText.vue'
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import PButton from 'primevue/button'
+
+document.body.addEventListener('mousemove', function () {
+  startAudio()
+})
+
+const startAudio = () => {
+  const audio = document.getElementById('audio') as HTMLAudioElement
+  audio.muted = false
+  audio.play()
+}
 
 const router = useRouter()
 
@@ -87,5 +102,6 @@ const text = ref([
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
 }
 </style>
