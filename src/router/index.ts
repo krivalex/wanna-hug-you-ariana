@@ -28,6 +28,11 @@ const router = createRouter({
       name: 'stageFour',
       component: (): Promise<RouteComponent> => import('../sections/StageFour.vue'),
     },
+    {
+      path: '/stage5',
+      name: 'stageFive',
+      component: (): Promise<RouteComponent> => import('../sections/StageFive.vue'),
+    },
   ],
 })
 
