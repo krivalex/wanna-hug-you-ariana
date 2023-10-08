@@ -18,10 +18,6 @@ import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import PButton from 'primevue/button'
 
-document.body.addEventListener('mousemove', function () {
-  startAudio()
-})
-
 const startAudio = () => {
   const audio = document.getElementById('audio') as HTMLAudioElement
   audio.muted = false
@@ -37,6 +33,9 @@ const nextStage = () => {
 }
 
 onMounted(() => {
+  setTimeout(() => {
+    startAudio()
+  }, 300)
   setTimeout(() => {
     text.value[0].show = true
   }, 3000)

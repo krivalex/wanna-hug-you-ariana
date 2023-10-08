@@ -7,7 +7,7 @@
     <video autoplay loop muted>
       <source src="@/assets/bg-video-stocks/rain.mp4" type="video/mp4" />
     </video>
-    <audio id="audio" loop muted>
+    <audio id="audio" autoplay loop muted>
       <source src="@/assets/bg-audio/BRANDwet.mp3" type="audio/mp3" />
     </audio>
   </div>
@@ -32,10 +32,6 @@ const nextStageApprove = ref(false)
 const firstText = ref(false)
 const secondText = ref(false)
 
-document.body.addEventListener('mousemove', function () {
-  startAudio()
-})
-
 const startAudio = () => {
   const audio = document.getElementById('audio') as HTMLAudioElement
   audio.muted = false
@@ -43,6 +39,9 @@ const startAudio = () => {
 }
 
 onMounted(() => {
+  setTimeout(() => {
+    startAudio()
+  }, 300)
   setTimeout(() => {
     firstText.value = true
   }, 2000)

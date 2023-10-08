@@ -4,7 +4,7 @@
     <video autoplay loop muted>
       <source src="@/assets/bg-video-stocks/sea.mp4" type="video/mp4" />
     </video>
-    <audio id="audio" loop muted>
+    <audio id="audio" loop autoplay muted>
       <source src="@/assets/bg-audio/BRANDutopia.mp3" type="audio/mp3" />
     </audio>
   </div>
@@ -38,10 +38,6 @@ const nextStage = () => {
   router.push('/stage4')
 }
 
-document.body.addEventListener('mousemove', function () {
-  startAudio()
-})
-
 const startAudio = () => {
   const audio = document.getElementById('audio') as HTMLAudioElement
   audio.muted = false
@@ -49,6 +45,9 @@ const startAudio = () => {
 }
 
 onMounted(() => {
+  setTimeout(() => {
+    startAudio()
+  }, 300)
   setTimeout(() => {
     poema.value[0].show = true
   }, 2000)

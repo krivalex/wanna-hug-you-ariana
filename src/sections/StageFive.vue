@@ -46,6 +46,9 @@ const startAudio = () => {
 
 onMounted(() => {
   setTimeout(() => {
+    startAudio()
+  }, 300)
+  setTimeout(() => {
     firstText.value = true
   }, 2000)
   setTimeout(() => {

@@ -46,21 +46,22 @@
 import PButton from 'primevue/button'
 import PCalendar from 'primevue/calendar'
 import PCarousel from 'primevue/carousel'
-
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
 const warningButton = ref(false)
 const date = ref(new Date('10/14/2023'))
-
-document.body.addEventListener('mousemove', function () {
-  startAudio()
-})
 
 const startAudio = () => {
   const audio = document.getElementById('audio') as HTMLAudioElement
   audio.muted = false
   audio.play()
 }
+
+onMounted(() => {
+  setTimeout(() => {
+    startAudio()
+  }, 300)
+})
 
 const value = ref([
   {
