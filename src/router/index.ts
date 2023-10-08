@@ -33,6 +33,11 @@ const router = createRouter({
       name: 'stageFive',
       component: (): Promise<RouteComponent> => import('../sections/StageFive.vue'),
     },
+    {
+      path: '/stage6',
+      name: 'stageSix',
+      component: (): Promise<RouteComponent> => import('../sections/StageSix.vue'),
+    },
   ],
 })
 

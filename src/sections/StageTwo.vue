@@ -17,7 +17,6 @@
 </template>
 
 <script setup lang="ts">
-// style="margin: 30px 0px; padding: 0.75rem 0; border-radius: 50%"
 import PCarousel from 'primevue/carousel'
 import PButton from 'primevue/button'
 import { ref } from 'vue'
