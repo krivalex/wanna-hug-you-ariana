@@ -13,6 +13,7 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
+import ymaps from 'ymaps'
 
 const markerIcon = {
   layout: 'default#imageWithContent',
