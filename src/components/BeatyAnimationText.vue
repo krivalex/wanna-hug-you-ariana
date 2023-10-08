@@ -1,5 +1,7 @@
 <template>
-  <h2 v-if="show">{{ text }}</h2>
+  <div class="content">
+    <h2 class="this-text" v-if="show">{{ text }}</h2>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -37,27 +39,23 @@ defineProps({
 })
 </script>
 
-<style lang="scss">
-:root {
-  --color: #ffffff;
-  --background: #2196f3;
-}
-
-body {
+<style scoped lang="scss">
+.content {
   font-family: 'Baloo Tamma', cursive;
   background: var(--background);
   color: var(--color);
   transition: 4s;
+  height: 100vh;
+  width: 100vw;
 }
-
-h2 {
+.this-text {
   text-align: center;
   width: 100vw;
   margin: 0px auto;
   font-size: 40px;
   padding: 0 10px;
   letter-spacing: 5px;
-  top: 30%;
+  top: 40%;
   position: absolute;
   transition: 4s;
   text-shadow: -1px -1px 0px var(--background), 3px 3px 0px var(--background), 6px 6px 0px #00000055;

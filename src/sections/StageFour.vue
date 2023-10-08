@@ -43,13 +43,21 @@ onMounted(() => {
   }, 23000)
   setTimeout(() => {
     text.value[4].show = false
-    nextStageApprove.value = true
+    text.value[5].show = true
   }, 28000)
+  setTimeout(() => {
+    text.value[4].show = false
+    nextStageApprove.value = true
+  }, 33000)
 })
 
 const text = ref([
   {
-    letters: 'Я надеюсь тебе понравились цветы',
+    letters: 'Красивые цветы, правда?',
+    show: false,
+  },
+  {
+    letters: 'Они напомнили мне тебя',
     show: false,
   },
   {
@@ -79,6 +87,5 @@ const text = ref([
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
 }
 </style>
